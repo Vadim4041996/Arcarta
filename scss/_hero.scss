@@ -1,0 +1,84 @@
+
+// HERO
+.hero {
+    background-color: $beigeColor;
+    padding-top: toRem(80);
+    padding-bottom: toRem(30);
+    @media(min-width: toEm(768)) {
+        padding-top: toRem(140);
+        padding-bottom: toRem(52);
+    }
+    // .hero__container
+    &__container {
+    }
+
+    // .hero__body
+    &__body {
+        max-width: toRem(565);
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    // .hero__badge-wrapper
+    &__badge-wrapper {
+        display: flex;
+        justify-content: center;
+        font-weight: 700;
+        text-align: center;
+        line-height: 1.92;
+        font-size: toRem(12);
+        &:not(:last-child) {
+            margin-bottom: toRem(11);
+        }
+    }
+
+    // .hero__badge-left
+    &__badge-left {
+        background-color: #F9A38F;
+        color: $whiteColor;
+        padding-left: toRem(11);
+        padding-right: toRem(14);
+        border-radius: toRem(20);
+    }
+
+    // .hero__badge-right
+    &__badge-right {
+        background-color: #F9EDE2;
+        color: #4D4D4D;
+        padding-left: toRem(31);
+        padding-right: toRem(20);
+        margin-left: toRem(-9);
+        border-radius: toRem(20);
+    }
+
+    // .hero__content
+    &__content {
+        line-height: 1.57;
+        font-size: toRem(18);
+        display: flex;
+        flex-direction: column;
+        gap: toRem(28);
+        @media(min-width: toEm(550)) {
+            font-size: toRem(21);
+        }
+        p {
+            max-width: toRem(524);
+            width: 100%;
+        }
+        &:not(:last-child) {
+            margin-bottom: toRem(20);
+        } 
+    }
+
+    // .hero__title
+    &__title {
+        @include adaptiveValue('font-size', 110, 36);
+        line-height: 1.08;
+        font-weight: 700;
+    }
+
+    // .hero__button
+    &__button {
+    }
+}

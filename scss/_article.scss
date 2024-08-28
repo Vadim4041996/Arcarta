@@ -1,0 +1,188 @@
+
+// ARTICLE
+.article {
+    padding-top: toRem(22);
+    margin: toRem(80) 0 toRem(50) 0;
+    @media(min-width: toEm(768)) {
+        margin: toRem(177) 0 toRem(135) 0;
+    }
+    // .article__container
+    &__container {
+    }
+
+    // .article__content
+    &__content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: toRem(20);
+        @media(min-width: toEm(768)) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: toRem(780);
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    // .article__picture-wrapper
+    &__picture-wrapper {
+        width: toRem(220);
+        min-height: toRem(260);
+        border-radius: toRem(10);
+        background-color: #32686F;
+        box-shadow: toRem(1) toRem(1) toRem(12) 0 rgba(0, 0, 0, 0.55);
+        @media(min-width: toEm(768)) {
+            margin: toRem(62) toRem(8) toRem(-8) toRem(-8);
+        }
+    }
+
+    // .article__picture
+    &__picture {
+        width: toRem(220);
+        min-height: toRem(260);
+        border-radius: toRem(10);
+        background-color: #32686F;
+        box-shadow: toRem(1) toRem(1) toRem(12) 0 rgba(0, 0, 0, 0.55);
+        margin: toRem(-8) toRem(-8) toRem(8) toRem(8);
+        padding: toRem(19) toRem(25) toRem(23);
+        color: $whiteColor;
+    }
+
+    // .article__picture-content
+    &__picture-content {
+        font-size: toRem(14);
+        >span {
+            display: inline-block;
+            line-height: 1.42;
+            font-weight: 400;
+            margin-bottom: toRem(23);
+        }
+    }
+
+    // .article__picture-body
+    &__picture-body {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(12);
+        margin-bottom: toRem(33);
+    }
+
+    // .article__picture-img
+    &__picture-img {
+        max-width: toRem(64);
+        width: 100%;
+    }
+
+    // .article__picture-sub-title
+    &__picture-sub-title {
+        font-size: toRem(28);
+        line-height: 1.14;
+        font-weight: 700;
+    }
+
+    // .article__link-wrapper
+    &__link-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(9);
+        &::before {
+            content: '';
+            width: 100%;
+            height: toRem(1);
+            background-color: rgba(255, 255, 255, 0.18);
+
+        }
+    }
+
+    // .article__picture-link
+    &__picture-link {
+        line-height: 1.42;
+        transition: all .3s;
+        @media(any-hover:hover) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        span {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            gap: toRem(10);
+            &::before {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: toRem(14);
+            }
+       }
+    }
+
+    // .article__picture-btn
+    &__picture-btn {
+    }
+
+    // .article__body
+    &__body {
+        text-align: center;
+        @media(min-width: toEm(768)) {
+            max-width: 59.6%;
+            text-align: left;
+        }
+        >*:not(:last-child) {
+            margin-bottom: toRem(18);
+        }
+    }
+
+    // .article__beidge
+    &__beidge {
+        display: inline-block;
+        background-color: #F9A28F;
+        color: $whiteColor;
+        font-size: toRem(12);
+        font-weight: 700;
+        line-height: 2.08;
+        padding: 0 toRem(15);
+        border-radius: toRem(20);
+    }
+
+    // .article__body-inner
+    &__body-inner {
+        >*:not(:last-child) {
+            margin-bottom: toRem(23);
+        }
+    }
+
+    // .article__text
+    &__text {
+        font-size: toRem(15);
+        line-height: 1.57;
+        display: flex;
+        flex-direction: column;
+        gap: toRem(25);
+        @media(min-width: toEm(768)) {
+            font-size: toRem(21);
+        }
+    }
+
+    // .article__title
+    &__title {
+        @include adaptiveValue('font-size', 53, 26);
+        font-weight: 700;
+        line-height: 1.16;
+    }
+
+    // .article__button
+    &__button {
+        background-color: $whiteColor;
+        border: toRem(2) solid #E1DED9;
+        color: $blackColor;
+        @media(any-hover:hover) {
+            &:hover {
+                color: $whiteColor;
+            }
+        }
+    }
+}

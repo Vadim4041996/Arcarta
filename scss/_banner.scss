@@ -1,0 +1,17 @@
+
+.banner {
+    background-color: $beigeColor;
+    padding-top: toRem(80);
+    @media(min-width: toEm(768)) {
+        padding-top: toRem(100);
+    }
+    // .banner__image
+    &__image {
+        width: 100%;
+        img {
+            aspect-ratio: 1371 / 635;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+
+// Button
+.button {
+    background-color: $brownColor;
+    color: $whiteColor;
+    padding: toRem(13) toRem(26);
+    border-radius: toRem(50);
+    font-size: toRem(14);
+    font-weight: 700;
+    line-height: 1.42;
+    transition: all .3s;
+    @media(any-hover:hover) {
+        &:hover {
+            background-color: $mainColor;
+        }
+    }
+}
+

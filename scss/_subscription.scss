@@ -1,0 +1,140 @@
+
+// SUBSCRIPTION
+.subscription {
+    // .subscription__container
+    &__container {
+        border: toRem(10);
+        background-color: #FAF7F3;
+    }
+
+    // .subscription__content
+    &__content {    
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: toRem(55);
+        padding: toRem(20) 0;
+        @media(min-width: toEm(768)) {
+            flex-direction: row;
+            padding: toRem(44) toRem(45);
+        }
+    }
+
+    // .subscription__image
+    &__image {
+        width: 100%;
+        @media(min-width: toEm(768)) {
+            width: 40%;
+        }
+        @media(min-width: toEm(992)) {
+            width: 30.3%;
+        }
+        img {
+            aspect-ratio: 336 / 270;
+            width: 100%;
+        }
+    }
+
+    // .subscription__body
+    &__body {
+        width: 100%;
+        text-align: center;
+        @media(min-width: toEm(768)) {
+            text-align: left;
+            width: 50%;
+        }
+        @media(min-width: toEm(992)) {
+            width: 41%;
+        }
+        >*:not(:last-child) {
+            margin-bottom: toRem(31);
+        }
+    }
+
+    // .subscription__text
+    &__text {
+        font-size: toRem(16);
+        line-height: 1.4;
+        @media(min-width: toEm(768)) {
+            font-size: toRem(20);
+            line-height: 1.6;
+        }
+        >*:not(:last-child) {
+            margin-bottom: toRem(24);
+        }
+    }
+
+    // .subscription__title
+    &__title {
+        @include adaptiveValue('font-size', 40, 26);
+        line-height: 1.35;
+        font-weight: 700;
+        color: #1A1918;
+    }
+
+    // .subscription__form
+    &__form {
+        position: relative;
+        width: 100%;
+        @media(min-width: toEm(550)) and (max-width: toEm(767)) {
+            width: 80%;
+            margin: 0 auto;
+        }
+        @media(min-width: toEm(992)) {
+            max-width: toRem(380);
+        }
+    }
+
+    // .subscription__input
+    &__input {
+        font-size: toRem(16);
+        color: $mainColor;
+        line-height: 1.4;
+        padding: toRem(8) toRem(43) toRem(8) toRem(10);
+        border-radius: toRem(10);
+        background-color: $whiteColor;
+        box-shadow: 0 toRem(1) toRem(12) 0 rgba(0, 0, 0, 0.10);
+        width: 100%;
+        @media(min-width: toEm(550)) {
+            font-size: toRem(20);
+        }
+        @media(min-width: toEm(768)) {
+            line-height: 1.6;
+            padding: toRem(11) toRem(50) toRem(12) toRem(30);
+        }
+        &:focus {
+            &::placeholder {
+                opacity: 0;
+                color: rgba(0, 0, 0, 0.45);
+                transition: all .5s;
+            }
+        } 
+    }
+
+    // .subscription__button
+    &__button {
+        width: toRem(29);
+        height: toRem(29);
+        background-color: $mainColor;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 50%;
+        right: toRem(9);
+        transform: translate(0, -50%);
+        transition: all .3s;
+        @media(any-hover:hover) {
+            &:hover {
+                background-color: #C47344;
+            }
+        }
+        &::before {
+            font-size: toRem(19);
+            line-height: 1.6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $whiteColor;
+        }
+    }
+}
