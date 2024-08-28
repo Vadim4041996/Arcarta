@@ -144,7 +144,7 @@
 
     // .footer__column
     &__column {
-        flex: 1 1 tRoRem(140);
+        flex: 1 1 toRem(140);
         font-size: toRem(13);
         line-height: 1.53;
         >*:not(:last-child) {
